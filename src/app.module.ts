@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { RedisModule } from '@nestjs/redis';
+import { RedisModule } from '@nestjs-modules/ioredis';
 import { BookingsModule } from './bookings/bookings.module';
 import { Event } from './events/event.entity';
 import { Booking } from './bookings/booking.entity';

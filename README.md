@@ -1,10 +1,30 @@
 # API для бронирования мест на мероприятиях (Тестовое задание).
 
-## Установка
+## Поднятие через Docker Compose
+
+Самый простой способ развернуть приложение:
+
+```bash
+docker-compose up -d
+```
+
+Остановка:
+```bash
+docker-compose down
+```
+
+Остановка с удалением данных:
+```bash
+docker-compose down -v
+```
+
+## Локальная разработка
+
+### Установка
 
 `npm install`
 
-## Настройка базы данных
+### Настройка базы данных
 
 Создайте файл `.env` в корне проекта:
 
@@ -15,9 +35,13 @@ DB_USERNAME=postgres
 DB_PASSWORD=postgres
 DB_DATABASE=nest_tech
 NODE_ENV=development
+
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
 ```
 
-## Запуск
+### Запуск
 
 `npm run start:dev`
 
@@ -48,5 +72,7 @@ NODE_ENV=development
 
 **Ошибки:**
 - `400 Bad Request` - Событие не найдено или нет свободных мест
-- `409 Conflict` - Пользователь уже забронировал место на это событие
+- `409 Conflict` - Пользователь уже забронировал место на это событие или запрос уже обрабатывается
+
+
 

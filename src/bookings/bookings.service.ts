@@ -1,6 +1,6 @@
 import { Injectable, ConflictException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { InjectRedis } from '@nestjs/redis';
+import { InjectRedis } from '@nestjs-modules/ioredis';
 import { Repository } from 'typeorm';
 import { Redis } from 'ioredis';
 import { Booking } from './booking.entity';
