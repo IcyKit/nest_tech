@@ -15,7 +15,7 @@ import { Booking } from './bookings/booking.entity';
       password: process.env.DB_PASSWORD || 'postgres',
       database: process.env.DB_DATABASE || 'nest_tech',
       entities: [Event, Booking],
-      synchronize: process.env.NODE_ENV !== 'production',
+      synchronize: process.env.DB_SYNCHRONIZE === 'true' || process.env.NODE_ENV !== 'production',
     }),
     RedisModule.forRoot({
       config: {

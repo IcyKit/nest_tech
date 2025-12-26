@@ -43,6 +43,7 @@ services:
       REDIS_HOST: redis
       REDIS_PORT: 6379
       NODE_ENV: production
+      DB_SYNCHRONIZE: 'true'
     ports:
       - "3000:3000"
     depends_on:
